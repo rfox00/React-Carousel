@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rfox00/React-Carousel/issues"
   },
-  "homepage": "https://github.com/rfox00/React-Carousel#readme"
+  "homepage": "https://github.com/rfox00/React-Carousel#readme",
+  "dependencies": {
+    "typescript": "^3.3.3"
+  }
 }
