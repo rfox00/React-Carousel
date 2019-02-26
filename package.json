@@ -4,6 +4,8 @@
   "description": "react-carouse",
   "main": "index.js",
   "scripts": {
+    "web": "cross-env webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,15 @@
   "homepage": "https://github.com/rfox00/React-Carousel#readme",
   "dependencies": {
     "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.11",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
   }
 }
