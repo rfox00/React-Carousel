@@ -1,13 +1,15 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const cleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 console.log('NODE_ENV11111111:',process.env.NODE_ENV);
 
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: './src/index.js',
-    print: './src/print.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -22,22 +24,26 @@ module.exports = {
       }
     ]
   },
+
+  devtool: 'inline-source-map',
   
   // webpack-dev-server 配置
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    hot: true,
     port: 8180
   },
 
   // plugins 配置
   plugins: [
+    new cleanWebpackPlugin(['dist/*']),
     new htmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'React-Carousel',
       filename: 'index.html',
       template: './index-template.html',
-      inject: 'true',
       path: 'dist/'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
