@@ -3,11 +3,12 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
-console.log('NODE_ENV11111111:',process.env.NODE_ENV);
-
+const isProd = process.env.NODE_ENV === 'production';
+console.log('NODE_ENV11111111:',process.env.NODE_ENV,isProd);
 
 module.exports = {
   mode: 'development',
+  // mode: isProd ? 'production' : 'development',
   entry: {
     app: './src/index.js',
   },
@@ -21,7 +22,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
     ]
   },
 

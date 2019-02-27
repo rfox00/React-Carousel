@@ -12,6 +12,17 @@ async function delay(milliseconds: number) {
   });
 }
 
-printDelayed(["Hello", "beautiful", "asynchronous", "world"]).then(() => {
+export default printDelayed(["Hello", "beautiful", "asynchronous", "world"]).then(() => {
   console.log("打印每一个内容!");
 });
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+function greeter(person : Person) {
+  console.log("Hello, " + person.firstName + " " + person.lastName);
+}
+
+greeter({firstName: 'tt', lastName: 'aa'});

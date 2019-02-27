@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './styles.css';
 import printMe from './print.js';
+import './test.ts';
 
 function component() {
   let element = document.createElement('div');

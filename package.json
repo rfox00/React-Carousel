@@ -23,9 +23,20 @@
   },
   "homepage": "https://github.com/rfox00/React-Carousel#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "typescript": "^3.3.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
